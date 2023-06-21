@@ -1,0 +1,125 @@
+* {
+  margin:0;
+  padding:0;
+}
+body {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: papayawhip;
+  color: navy;
+  font-family: Nunito, serif;
+}
+#title {
+  margin-top: 15px;
+  height: 16px;
+  margin-bottom: 15px;
+}
+
+#subtitle {
+  height: 12px;
+  margin-bottom: 15px;
+}
+
+#selectButton {
+  border-radius: 3px;
+  height: 24px;
+  text-align: center;
+  color: navy;
+  background-color: #f9f9f9;
+  border: 2px solid navy;
+  margin-bottom: 15px;
+}
+
+#canvas_bars {
+  height: 70vh;
+  width: 90vw;
+  background-color: papayawhip;
+}
+
+ @media screen and (min-width:768px) {
+ #title {
+   height: 25px;
+   margin-bottom: 18px;
+ }
+ #subtitle {
+   height: 20px;
+   margin-bottom: 18px;
+ }
+ #selectButton {
+   height: 28px;
+   margin-bottom: 18px;
+ }
+}
+
+
+ @media screen and (min-width:950px) {
+   #title {
+   height: 30px;
+ }
+ #subtitle {
+   height: 24px;
+ }
+ #selectButton {
+   height: 32px;
+}
+ }
+
+
+ @media screen and (min-width:1238px) {
+   #title {
+   height: 32px;
+ }
+ #subtitle {
+   height: 26px;
+ }
+ #selectButton {
+   height: 36px;
+ }
+ }
+#nav-bar {
+  display: flex;
+  width:100%;
+  background-color: #ffffe0;
+  border: 1px solid navy;
+  justify-content: space-evenly;
+  height: 50px;
+  top:0;
+  left:0;
+}
+
+#here {
+  background-color: #ffffb3;
+}
+
+ul {
+  display: flex;
+  align-items: center; 
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  color: navy;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: navy;
+  padding: 3px;
+}
+
+li {
+  display: block;
+  margin: 15px;
+  list-style-type: none;
+  font-size: 12px;
+  color: navy;
+ }
+
+
+#tooltip {
+  position: absolute;
+  padding: 5px;
+  visibility: hidden;
+  }
