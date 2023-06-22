@@ -36,7 +36,7 @@ let pad=Math.floor(w/12);
 let l=cnt_lst.length<10?10:cnt_lst.length;
 let mouseover = (d,i)=>{
 
-toolTip.style("visibility","visible").html(i[0]+"<br>" + i[1]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("width",0.18*w+"px").style("text-align","center").style("display","block").style("top",0.5*h_s+"px").style("left",0.5*(w_s-w)+xScale(i[0])+"px").style("font",`${0.5*(0.13*w/Math.sqrt(1.3*l)+0.13*h/Math.sqrt(1.3*l))}px arial`);}
+toolTip.style("visibility","visible").html(i[0]+"<br>" + i[1]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("width",0.18*w+"px").style("text-align","center").style("display","block").style("top",Math.min(400,0.5*h_s)+"px").style("left",0.5*(w_s-w)+xScale(i[0])+"px").style("font",`${0.5*(0.13*w/Math.sqrt(1.3*l)+0.13*h/Math.sqrt(1.3*l))}px arial`);}
 function colorAttr(c){
   for(let i=0;i<cnt_lst.length;i++){
     if(c==cnt_lst[i]){
