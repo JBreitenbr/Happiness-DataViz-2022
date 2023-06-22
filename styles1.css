@@ -37,7 +37,7 @@ body {
   height: 400px;
   width: 370px;
   background-color: papayawhip;
-  border: 1px solid darkred;
+  /*border: 1px solid darkred;*/
 }
 
  @media screen and (min-width:767px) and (min-aspect-ratio: 1.2) {
@@ -45,7 +45,7 @@ body {
  #canvas_bars {
    height: 450px;
    width: 580px;
-   border: 2px darkgreen solid;
+  /* border: 2px darkgreen solid;*/
  }
  #title {
    height: 25px;
@@ -61,14 +61,14 @@ body {
 #canvas_bars {
   height: 650px;
   width: 520px;
-  border: 2px lime solid;
+  /*border: 2px lime solid;*/
 }
 }
  @media screen and (min-width:1050px) and (min-aspect-ratio:1.4){
    #canvas_bars {
   height: 570px;
   width: 820px;
-  border: 2px orange solid;
+  /*border: 2px orange solid;*/
 }
    #title {
    height: 30px;
@@ -86,7 +86,7 @@ body {
    #canvas_bars {
   height: 720px;
   width: 1020px;
-  border: 2px purple solid;
+ /* border: 2px purple solid;*/
    }
    #title {
    height: 40px;
