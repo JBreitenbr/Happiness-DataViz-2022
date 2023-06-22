@@ -81,7 +81,11 @@ body {
 }
  }
 
-
+@media screen and (min-width:1050px) and (max-aspect-ratio:0.9){
+   #canvas_bars {
+  height: 820px;
+  width: 720px;}
+}
  @media screen and (min-width:1238px) and (min-aspect-ratio: 1.6){
    #canvas_bars {
   height: 720px;
@@ -97,7 +101,12 @@ body {
  #selectButton {
    height: 40px;
  }
- }
+ } 
+@media screen and (min-width:1238px) and (max-aspect-ratio: 0.9){
+   #canvas_bars {
+  height: 1020px;
+  width: 720px;}
+}
 #nav-bar {
   display: flex;
   width:100%;
