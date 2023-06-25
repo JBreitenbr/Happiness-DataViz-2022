@@ -53,13 +53,13 @@ dat=residuals[dim].filter((item)=>item[1]==reg);
 let legbox=canvas_bubbles.append('g').attr("id","legend");
 
 for(let i=0; i<5; i++){
-legbox.append("rect").attr("x",xScale(scales[dim][0])+0.02*w).attr("y",yAxisScale(1.8)+i*(leg_h/6)).attr("height",h/35).attr("width",h/35).attr("fill",pal[i]).attr("opacity",0.7);
+legbox.append("rect").attr("x",xScale(scales[dim][0])+0.02*w).attr("y",yAxisScale(1.8)+i*(leg_h/6)).attr("height",h/42).attr("width",h/42).attr("fill",pal[i]).attr("opacity",0.7);
 
 legbox.append("text").text(reg2[i]).style("text-anchor","end").attr("x",xScale(scales[dim][0])+0.43*w).attr("y",yAxisScale(1.58)+i*(leg_h/6)).style("font",`${0.5*(w/42+h/42)}px arial`).style("fill","navy");}
 
 for(let i=5;i<10;i++){
 
-legbox.append("rect").attr("x",xScale(scales[dim][0])+0.46*w).attr("y",yAxisScale(1.8)+(i-5)*(leg_h/6)).attr("height",h/35).attr("width",h/35).attr("fill",pal[i]).attr("opacity",0.7);
+legbox.append("rect").attr("x",xScale(scales[dim][0])+0.46*w).attr("y",yAxisScale(1.8)+(i-5)*(leg_h/6)).attr("height",h/42).attr("width",h/42).attr("fill",pal[i]).attr("opacity",0.7);
 
 legbox.append("text").text(reg2[i]).style("text-anchor","end").attr("x",xScale(scales[dim][0])+0.82*w).attr("y",yAxisScale(1.58)+(i-5)*(leg_h/6)).style("font",`${0.5*(w/42+h/42)}px arial`).style("fill","navy");}
 
