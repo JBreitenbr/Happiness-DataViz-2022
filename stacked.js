@@ -86,13 +86,13 @@ for(let i=0;i<4;i++){
 
 legbox.append("rect").attr("x",0.015*leg_w).attr("y",18/130*leg_h+i*25/130*leg_h).attr("height",leg_h/8).attr("width",leg_h/8).attr("fill",set2[i]);
 
-legbox.append("text").text(expl[i]).style("text-anchor","end").attr("x",0.48*leg_w).attr("y",30/130*leg_h+i*25/130*leg_h).style("font",`${leg_h/11.3}px arial`).style("fill","navy");}
+legbox.append("text").text(expl[i]).style("text-anchor","end").attr("x",0.48*leg_w).attr("y",30/130*leg_h+i*25/130*leg_h).style("font",`${leg_h/9.5}px arial`).style("fill","navy");}
 
 for(let i=4;i<7;i++){
 
 legbox.append("rect").attr("x",0.54*leg_w).attr("y",18/130*leg_h+(i-4)*25/130*leg_h).attr("height",leg_h/8).attr("width",leg_h/8).attr("fill",set2[i]);
 
-legbox.append("text").text(expl[i]).style("text-anchor","end").attr("x",0.95*leg_w).attr("y",30/130*leg_h+(i-4)*25/130*leg_h).style("font",`${leg_h/11.3}px arial`).style("fill","navy");}
+legbox.append("text").text(expl[i]).style("text-anchor","end").attr("x",0.95*leg_w).attr("y",30/130*leg_h+(i-4)*25/130*leg_h).style("font",`${leg_h/9.5}px arial`).style("fill","navy");}
 
 let toolTip1=d3.select("body").append("div").style("visibility","hidden").style("position","absolute").style("background-color","white");
 
@@ -111,10 +111,14 @@ let toolTip7=d3.select("body").append("div").style("visibility","hidden").style(
 let toolTip8=d3.select("body").append("div").style("visibility","hidden").style("position","absolute").style("background-color","white");
 
 let w_s=window.innerWidth;
-
 let h_s=window.innerHeight;
-
-  
+let c;
+if(w_s>760 && h_s>w_s){
+  c=30;
+}
+else {
+  c=85;
+}
 
 let w=+d3.select("#canvas_c1").style("width").slice(0,-2);
 
@@ -122,49 +126,49 @@ let h=+d3.select("#canvas_c1").style("height").slice(0,-2);
 
 let mouseover1 = (d,i)=>{
 
-  toolTip1.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",115+2.5*h+"px").style("font",`${h/4}px arial`);}
+  toolTip1.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",c+2.5*h+"px").style("font",`${h/4}px arial`);}
 
   
 
 let mouseover2 = (d,i)=>{
 
-toolTip2.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",115+3.5*h+"px").style("font",`${h/4}px arial`);
+toolTip2.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",c+3.5*h+"px").style("font",`${h/4}px arial`);
 
 }
 
 let mouseover3 = (d,i)=>{
 
-toolTip3.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",115+4.5*h+"px").style("font",`${h/4}px arial`);
+toolTip3.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",c+4.5*h+"px").style("font",`${h/4}px arial`);
 
 }
 
 let mouseover4 = (d,i)=>{
 
-toolTip4.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",115+5.5*h+"px").style("font",`${h/4}px arial`);
+toolTip4.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",c+5.5*h+"px").style("font",`${h/4}px arial`);
 
 }
 
 let mouseover5 = (d,i)=>{
 
-toolTip5.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",115+6.5*h+"px").style("font",`${h/4}px arial`);
+toolTip5.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",c+6.5*h+"px").style("font",`${h/4}px arial`);
 
 }
 
 let mouseover6 = (d,i)=>{
 
-toolTip6.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",115+7.5*h+"px").style("font",`${h/4}px arial`);
+toolTip6.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",c+7.5*h+"px").style("font",`${h/4}px arial`);
 
 }
 
 let mouseover7 = (d,i)=>{
 
-toolTip7.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",115+8.5*h+"px").style("font",`${h/4}px arial`);
+toolTip7.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",c+8.5*h+"px").style("font",`${h/4}px arial`);
 
 }
 
 let mouseover8 = (d,i)=>{
 
-toolTip8.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",115+9.5*h+"px").style("font",`${h/4}px arial`);
+toolTip8.style("visibility","visible").html(i[0]).style("background-color","#ffffe0").style("color","darkblue").style("border","1px solid darkblue").style("left",0.5*(w_s-w)+i[1]*w*0.1+0.15*w+"px").style("top",c+9.5*h+"px").style("font",`${h/4}px arial`);
 
 }
 

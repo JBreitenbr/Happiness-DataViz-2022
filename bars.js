@@ -14,23 +14,18 @@ d3.select("#canvas_bars").remove();
 
 let cnt_lst=countries[reg];
 
-console.log(cnt_lst);
 let canvas_bars = d3.select("body")
     .append("svg")
     .attr("id","canvas_bars");
 let toolTip=d3.select("body").append("div").style("visibility","hidden").style("position","absolute").attr("id","tooltip");
 let w_s=window.innerWidth;
 let h_s=window.innerHeight;
-/*
-let w=0.9*w_s;
-let h=0.7*h_s; */
+
 let w=+d3.select("#canvas_bars").style("width").slice(0,-2);
 let h=+d3.select("#canvas_bars").style("height").slice(0,-2);
 let pad_t=Math.floor(h/9);
 let pad_b=Math.floor(h/3.8);
-/*if(w>h){
-  pad_b=Math.floor(h/2.2);
-}*/
+
 let pad=Math.floor(w/12);
 
 let l=cnt_lst.length<10?10:cnt_lst.length;
