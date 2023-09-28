@@ -114,10 +114,10 @@ let w_s=window.innerWidth;
 let h_s=window.innerHeight;
 let c;
 if(w_s>760 && h_s>w_s){
-  c=30;
+  c=20;
 }
 else {
-  c=85;
+  c=75;
 }
 
 let w=+d3.select("#canvas_c1").style("width").slice(0,-2);
